@@ -1,0 +1,549 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: #7ae7e2;
+    color: #fff;
+}
+
+body::-webkit-scrollbar {
+    background-color: #000000;
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #7ae7e2;
+    border-radius: 20px;
+}
+
+body {
+    background: #000000;
+    color: #fff;
+}
+
+/* Header */
+header {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+.heading {
+    margin-left: 10px;
+    font-size: 70px;
+    color: #7ae7e2;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    position: fixed;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 40px;
+}
+
+nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #7ae7e2;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: all .5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.text h1 {
+    font-size: 90px;
+    font-weight: 900;
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.text h1::before {
+    content: "Hi, I'm Shaheer Naveed\A from Pakistan";
+    white-space: pre;
+    position: absolute;
+    top: -3%;
+    -webkit-text-stroke: 2px #7ae7e2;
+    color: transparent;
+    z-index: -1;
+    transition: ease-in 0.5s;
+}
+
+/* About Section */
+.about {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col-1 {
+    flex-basis: 35%;
+}
+
+.col-1 img {
+    width: 80%;
+    height: 45vh;
+    border-radius: 50%;
+}
+
+.col-2 {
+    flex-basis: 60%;
+}
+
+.subtitle {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #7ae7e2;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: all .5s;
+}
+
+.tab-links.active::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: #7ae7e2;
+    font-size: 14px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.tab {
+    display: block;
+}
+
+/* Services */
+.services {
+    padding: 30px 0;
+}
+
+.serv-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    margin-top: 50px;
+}
+
+.serv-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.serv-list div i {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.serv-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.serv-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.serv-list div:hover {
+    background: #7ae7e2;
+    transform: translateY(-10px);
+    color: #262626;
+}
+
+/* Work Section */
+.mywork {
+    padding: 50px 0;
+}
+
+.worklist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    margin-top: 50px;
+}
+
+.workin {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 70%;
+}
+
+.workin img {
+    margin-left: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform .5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #7ae7e2);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 15px;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a {
+    margin-top: 20px;
+    color: #7ae7e2;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.workin:hover img {
+    transform: scale(1.1);
+}
+
+.workin:hover .layer {
+    height: 100%;
+    width: 100%;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 100%;
+    color: #fff;
+}
+
+.contact .subtitle {
+    font-size: 100px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.details {
+    font-size: 26px;
+}
+
+.details p {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.details i {
+    font-size: 30px;
+    color: #7ae7e2;
+}
+
+.social-icons i {
+    font-size: 80px;
+    margin-top: 20px;
+    color: #fff;
+    transition: ease-out 0.5s;
+}
+
+.social-icons a i:hover {
+    color: #7ae7e2;
+    transform: scale(1.2);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background: #7ae7e2;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn2 {
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #5ac1bd;
+    transform: scale(1.05);
+}
+
+.end {
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 15px;
+}
+
+.end i {
+    color: #7ae7e2;
+}
+
+nav .bx {
+    display: none;
+}
+
+/* media querry */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 50px;
+    }
+    @media (max-width: 572px) {
+        .text {
+            margin-top: 50%;
+            font-size: 10px;
+
+        }
+    
+        .text h1 {
+            font-size: 0.5rem;
+            position: relative; 
+            z-index: 1; 
+        }
+    
+        .text h1::before {
+            display: none;
+          }
+          
+    }
+    
+    
+    #navLinks {
+        position: fixed;
+        background: #555;
+        text-align: left;
+        height: 100vh;
+        width: 50%;
+        top: 0;
+        right: 0;
+        display: block;
+        z-index: 9999;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+
+    #navLinks ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav .bx {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 2.4rem;
+        cursor: pointer;
+        font-weight: bolder;
+    }
+
+
+    nav ul li a {
+        font-size: 22px;
+    }
+
+    nav ul {
+        margin-top: 25px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 25px;
+        text-align: center;
+    }
+
+
+    .text {
+        margin-top: 50%;
+        font-size: 16px;
+    }
+
+    .text h1 {
+        font-size: 2.8rem;
+    }
+
+    .text h1::before {
+        content: "Hi, I'm Shaheer Naveed\A from Pakistan";
+        white-space: pre;
+        position: absolute;
+        top: -3%;
+        -webkit-text-stroke: 2px #7ae7e2;
+        color: transparent;
+        z-index: -1;
+        transition: ease-in 0.5s;
+    }
+
+    main {
+        padding: 4px;
+    }
+
+    .container {
+        padding: 10px;
+
+    }
+
+    .about .col-1 {
+        flex-basis: 100%;
+    }
+
+    .about .col-2 {
+        flex-basis: 100%;
+    }
+
+    .col-1 img {
+        width: 75%;
+        height: 45vh;
+        border-radius: 50%;
+        margin-left: 12%;
+    }
+
+    .serv-list {
+        grid-template-columns: 1fr;
+    }
+
+    .worklist {
+        grid-template-columns: 1fr;
+
+    }
+
+    .worklist .workin {
+        margin: auto;
+    }
+
+    .contact .subtitle {
+        font-size: 50px;
+    }
+
+    .details {
+        font-size: 20px;
+    }
+
+    .details p {
+        font-size: 16px;
+    }
+
+    .social-icons i {
+        font-size: 40px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
