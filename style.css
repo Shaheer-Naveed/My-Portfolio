@@ -403,7 +403,7 @@ nav .bx {
 /* media querry */
 @media (max-width: 768px) {
     .heading {
-        font-size: 50px;
+        font-size: 45px;
     }
     @media (max-width: 572px) {
         .text {
@@ -421,7 +421,13 @@ nav .bx {
         .text h1::before {
             display: none;
           }
-          
+          .col-2 p{
+            font-size: 15px;
+          }
+          nav .bx{
+            font-size: 15px;
+          }
+
     }
     
     
