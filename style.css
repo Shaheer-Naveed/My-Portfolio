@@ -763,3 +763,57 @@ nav ul li {
       }
 
 }
+@media (max-width: 451px) {
+
+    .text{
+        margin-top: 80%;
+    }
+    .text h1 {
+        font-size: 30px;
+        font-weight: 900;
+        position: relative;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .text h1::before {
+        content: "Hi, I'm Shaheer Naveed\A from Pakistan";
+        white-space: pre;
+        position: absolute;
+        top: -4%;
+        -webkit-text-stroke: 2px #7ae7e2;
+        color: transparent;
+        z-index: -1;
+        transition: ease-in 0.5s;
+    }
+      .col-2 p{
+        font-size: 15px;
+      }
+      nav .bx{
+        font-size: 30px;
+      }
+
+}
+@media (max-width: 398px) {
+    .text{
+        margin-top: 100%;
+    }
+    .text h1 {
+        font-size: 28px;
+        font-weight: 900;
+        position: relative;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+@media (max-width: 365px) {
+    .text{
+        margin-top: 100%;
+    }
+    .text h1 {
+        font-size: 25px;
+        font-weight: 900;
+        position: relative;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
