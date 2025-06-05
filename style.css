@@ -681,6 +681,7 @@ nav ul li {
 
     .worklist .workin {
         margin: auto;
+        width:350px;
     }
 
     .contact .subtitle {
@@ -799,6 +800,11 @@ nav ul li {
         height: 55px;
         font-size: 15px;
       }
+      .worklist .workin {
+        margin: auto;
+        width:300px;
+    }
+
      
 }
 @media (max-width: 398px) {
