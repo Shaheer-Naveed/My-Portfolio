@@ -802,7 +802,7 @@ nav ul li {
       }
       .worklist .workin {
         margin: auto;
-        width:300px;
+        width:400px;
     }
 
      
@@ -868,6 +868,7 @@ nav ul li {
     .layer h3{
          margin-bottom: 8px;
         }
+
     
 }
 @media (max-width: 291px){
